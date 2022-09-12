@@ -160,7 +160,7 @@ if option1 == "Triangular":
     a = st.sidebar.number_input('amplitude:')
     simetria = 0.5
     w = st.sidebar.number_input('Frecuency:', 1, 15)
-    t = np.linspace(-5, 5, 2000)
+    t = np.arange(-4*(1/w), 4*(1/w), 0.00001)
     y = a*signal.sawtooth(2 * np.pi * w * t, simetria)
     fig, ax = plt.subplots()
     ax.plot(t,y)
