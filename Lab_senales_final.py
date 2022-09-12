@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
 import scipy.signal as signal
-st.title("Laboratorio de Señales")
+st.title("Laboratorio Señales")
 
 st.sidebar.title("Generación de señales")
 option1= st.sidebar.selectbox(
@@ -157,9 +157,9 @@ if option1=="Pulso":
 
 #opcion_triangular
 if option1 == "Triangular":
-    a = st.sidebar.number_input('amplitude:')
+    a = st.sidebar.number_input('amplitud:')
     simetria = 0.5
-    w = st.sidebar.number_input('Frecuency:', 1, 15)
+    w = st.sidebar.number_input('Frecuencia:', 1, 15)
     t = np.arange(-4*(1/w), 4*(1/w), 0.00001)
     y = a*signal.sawtooth(2 * np.pi * w * t, simetria)
     fig, ax = plt.subplots()
